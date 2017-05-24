@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+       
+    <bean name="movieStar" class="app01a.bean.MovieStar"/>
+
+    <bean name="featuredMovieStar" class="app01a.bean.MovieStar">
+		<constructor-arg name="name" value="成龙"/>
+        <constructor-arg name="sex" value="男">
+        <constructor-arg name="description" value="T国际动作巨星"/>
+    </bean>
+
+    <bean id="calendar" class="java.util.Calendar"
+        factory-method="getInstance"/>
+      
+    <bean name="student1" class="app01a.bean.Student">
+        <property name="name" value="李雷"/>
+        <property name="address" ref="address1"/>
+    </bean>
+
+    <bean name="student2" class="app01a.bean.Student">
+        <constructor-org name="name" value="韩梅梅"/>
+        <constructor-org name="address" ref="address2"/>
+    </bean>
+    
+    <bean name="address1" class="app01a.bean.Address">
+        <constructor-arg name="address" value="北京市海淀区学院路20号"/>
+    </bean>
+
+    <bean name="address2" class="app01a.bean.Address">
+        <constructor-arg name="address" value="北京市朝阳区朝阳北路105号"/>
+    </bean>
+
+</beans>
